@@ -1,0 +1,23 @@
+version: "0.5"
+is_strict: true
+processes:
+  init_deps:
+    namespace: init
+    command: |
+      make deps
+    is_tty: true
+  init_build:
+    namespace: init
+    command: |
+      make build
+    is_tty: true
+    depends_on:
+      init_deps:
+        condition: process_completed_successfully
+  dev_env:
+    command: |
+      make run-dev-env
+    is_tty: true
+    depends_on:
+      init_build:
+        condition: process_completed_successfully

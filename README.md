@@ -36,6 +36,13 @@ Go programming language source code is in [bluesky-social/indigo](https://github
 
 ## Developer Quickstart
 
+### Automated setup
+
+1. Install [Devbox](https://github.com/jetify-com/devbox)
+1. Run `devbox services up`
+
+### Manual setup
+
 We recommend [`nvm`](https://github.com/nvm-sh/nvm) for managing Node.js installs. This project requires Node.js version 18. `pnpm` is used to manage the workspace of multiple packages. You can install it with `npm install --global pnpm`.
 
 There is a Makefile which can help with basic development tasks:
